@@ -13,6 +13,7 @@ function App() {
           <CurrentLocation />
           <Routes>
             <Route path='/' element={<Main />} />
+            <Route path='/russian-street/' element={<Main />} />
             <Route path='/events' element={<Events />} />
             <Route path='/directions' element={<Directions />} />
             <Route path='/about-us' element={<AboutUs />} />
