@@ -29,20 +29,20 @@ export function EventsGrid() {
     dispatch(getEventsAsync());
 
     let desciplineRes = await getDescipline();
-    const descipline = desciplineRes.map((item:any) => item.name);
+    const descipline = desciplineRes?.map((item:any) => item.name);
     setDirections(descipline);
 
     let subDiscipline = await getSubDescipline();
     setSubDiscipline(subDiscipline);
-    let idArray = desciplineRes.map((item:{id:number}) => item.id);
+    let idArray = desciplineRes?.map((item:{id:number}) => item.id);
     setDisciplineId(idArray);
 
     let regionsRes = await getRegion();
-    const regions = regionsRes.map((item:RegionType) => item.name);
+    const regions = regionsRes?.map((item:RegionType) => item.name);
     setRegionList(regions);
     
     let cityRes = await getCity();
-    const cities = cityRes.map((item:RegionType) => item.name);
+    const cities = cityRes?.map((item:RegionType) => item.name);
     setCityList(cities);
 
   }, [])

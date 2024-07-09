@@ -16,7 +16,7 @@ export function EventsCalendar() {
 
         <ArrowButton direction='left' changeDate={prevDaysClick}/>
 
-        {days.map(day => ( <button key={day} className={`events-calendar__day ${day === currentDate && 'events-calendar__day_current'}`} onClick={() => {setcurrentDate(day)}}>
+        {days?.map(day => ( <button key={day} className={`events-calendar__day ${day === currentDate && 'events-calendar__day_current'}`} onClick={() => {setcurrentDate(day)}}>
             {day}
         </button>
         ))}
